@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerShoot : MonoBehaviour {
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////////
-    void Start () {
-		
-	}
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////////////
 	void Update () {
@@ -27,7 +22,7 @@ public class playerShoot : MonoBehaviour {
             {
                 if (hit.collider.tag == "light")
                 {
-                    Debug.Log("Hit Light");
+                    hit.collider.gameObject.GetComponent<universalReciever>().updateLight();
                 }
             }
         }
@@ -40,7 +35,7 @@ public class playerShoot : MonoBehaviour {
             {
                 if (hit.collider.tag == "sound")
                 {
-                    Debug.Log("Hit sound");
+                    hit.collider.gameObject.GetComponent<universalReciever>().updateSound();
                 }
             }
         }
