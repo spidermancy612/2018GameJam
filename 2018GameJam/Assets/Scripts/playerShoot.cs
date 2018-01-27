@@ -55,8 +55,11 @@ public class playerShoot : MonoBehaviour {
         {
             RaycastHit hit;
 
+            Debug.Log("left click");
             if (Physics.Raycast(transform.position, transform.forward, out hit))
             {
+                Debug.Log("hit something");
+                Debug.Log(hit.collider.tag);
                 if (hit.collider.tag == "light")
                 {
                     Debug.Log("Hit Light");
@@ -69,8 +72,11 @@ public class playerShoot : MonoBehaviour {
         if (Input.GetMouseButtonDown(1))
         {
             RaycastHit hit;
+            Debug.Log("right click");
             if (Physics.Raycast(transform.position, transform.forward, out hit))
             {
+                Debug.Log("hit something");
+                Debug.Log(hit.collider.tag);
                 if (hit.collider.tag == "sound")
                 {
                     Debug.Log("Hit Sound");

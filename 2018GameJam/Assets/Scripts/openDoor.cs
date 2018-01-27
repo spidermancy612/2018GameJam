@@ -13,6 +13,8 @@ public class openDoor : MonoBehaviour {
     private universalReciever reciever;
     private bool isInteracting;
 
+    private bool isInTrigger;
+
     private Animator anim;
 
     private float timer;
@@ -36,14 +38,22 @@ public class openDoor : MonoBehaviour {
         if (timer > 0)
         {
             timer -= Time.deltaTime;
+            Debug.Log(timer);
         }
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKey(KeyCode.F) && isInTrigger && timer <= 0)
         {
-            isInteracting = true;
-        }
-        else
-        {
-            isInteracting = false;
+            doorState = !doorState;
+
+            if (doorState)
+            {
+                anim.Play("Opening");
+            }
+            else
+            {
+                anim.Play("Closing");
+            }
+
+            timer = doorDelay;
         }
     }
 
@@ -54,15 +64,21 @@ public class openDoor : MonoBehaviour {
         {
             message.SetActive(true);
         }
+
+        if (other.tag == "Player")
+        {
+            isInTrigger = true;
+        }
     }
 
     //////////////////////////////////////////////////////////////////////////////////////////
     private void OnTriggerStay(Collider other)
     {
+
+        /*
        //check for button press
        if(isInteracting && reciever.getLight())
         {
-            
             doorState = !doorState;
 
             if (timer <= 0)
@@ -79,13 +95,19 @@ public class openDoor : MonoBehaviour {
                 timer = doorDelay;
             }
             
-            
-        }
+            }
+            */
+     
     }
 
     //////////////////////////////////////////////////////////////////////////////////////////
     private void OnTriggerExit(Collider other)
     {
         message.SetActive(false);
+
+        if (other.tag == "Player")
+        {
+            isInTrigger = false;
+        }
     }
 }
