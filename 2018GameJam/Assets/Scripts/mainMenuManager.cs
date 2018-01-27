@@ -1,16 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class mainMenuManager : MonoBehaviour {
+    
+    [SerializeField]
+    private string sceneName = "";
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+     * Start Game Button code that launches the game scene.
+     * */
+    public void StartGame()
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+     * Quit Game Button code that quits the game.
+     * */
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
