@@ -100,6 +100,8 @@ public class playerShoot : MonoBehaviour {
     //Called when the player raycasts to an object tagged as "sound"
     private void applySound (universalReciever reciever)
     {
+        if (reciever == null)
+            Debug.Log("test");
         if (reciever.getSound())
         {
             if (soundAmmo < maxSoundAmmo)
