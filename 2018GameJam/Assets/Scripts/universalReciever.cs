@@ -11,6 +11,7 @@ public class universalReciever : MonoBehaviour {
     public void updateLight ()
     {
         lightActive = !lightActive;
+        Debug.Log("Changing Light");
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -29,5 +30,10 @@ public class universalReciever : MonoBehaviour {
     public bool getSound ()
     {
         return soundActive;
+    }
+
+    private void Update()
+    {
+        //Debug.Log(lightActive);
     }
 }

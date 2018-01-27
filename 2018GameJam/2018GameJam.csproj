@@ -84,6 +84,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\lightGenericSource.cs" />
     <Compile Include="Assets\Scripts\mainMenuManager.cs" />
     <Compile Include="Assets\Scripts\playerShoot.cs" />
     <Compile Include="Assets\Scripts\soundLaunchObject.cs" />

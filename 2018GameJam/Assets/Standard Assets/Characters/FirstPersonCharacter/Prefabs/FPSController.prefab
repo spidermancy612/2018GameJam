@@ -534,6 +534,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71da4143ab7127428114c485e5432aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSoundAmmo: 3
+  maxLightAmmo: 3
+  ammoCounterGUI: {fileID: 0}
 --- !u!136 &136727926217634576
 CapsuleCollider:
   m_ObjectHideFlags: 1
