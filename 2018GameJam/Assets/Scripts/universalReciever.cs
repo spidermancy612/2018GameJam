@@ -7,17 +7,26 @@ public class universalReciever : MonoBehaviour {
     private bool lightActive;
     private bool soundActive;
 
+    private bool soundChanged;
+    private bool lightChanged;
+
+    private int soundTimer;
+    private int lightTimer;
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     public void updateLight ()
     {
         lightActive = !lightActive;
-        Debug.Log("Changing Light");
+        lightTimer = 2;
+        lightChanged = true;
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     public void updateSound ()
     {
         soundActive = !soundActive;
+        soundTimer = 2;
+        soundChanged = true;
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -27,13 +36,42 @@ public class universalReciever : MonoBehaviour {
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
+    public bool recentSoundChange ()
+    {
+        return soundChanged;
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
+    public bool recentLightChange ()
+    {
+        return lightChanged;
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     public bool getSound ()
     {
         return soundActive;
     }
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     private void Update()
     {
-        //Debug.Log(lightActive);
+        if (soundTimer > 0)
+        {
+            soundTimer--;
+        }
+        else
+        {
+            soundChanged = false;
+        }
+
+        if (lightTimer > 0)
+        {
+            lightTimer--;
+        }
+        else
+        {
+            lightChanged = false;
+        }
     }
 }
