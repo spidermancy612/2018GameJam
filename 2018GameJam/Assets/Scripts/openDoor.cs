@@ -8,12 +8,17 @@ public class openDoor : MonoBehaviour {
 
     public GameObject door;
     public GameObject message;
-    universalReciever reciever;
+    public float doorDelay;
 
+    private universalReciever reciever;
+    private bool isInteracting;
+
+    private Animator anim;
+
+    private float timer;
 
     //true = closed door, false = opened door
-    bool doorState;
-
+    private bool doorState;
 
 	/////////////////////////////////////////////////////////////////////////////////////////
 	void Start ()
@@ -21,14 +26,32 @@ public class openDoor : MonoBehaviour {
         doorState = true;
         reciever = GetComponent<universalReciever>();
         message.SetActive(false);
+
+        anim = door.GetComponent<Animator>();
 	}
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    private void Update()
+    {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.F))
+        {
+            isInteracting = true;
+        }
+        else
+        {
+            isInteracting = false;
+        }
+    }
 
     /////////////////////////////////////////////////////////////////////////////////////////
     private void OnTriggerEnter(Collider other)
     {
         if(reciever.getLight())
         {
-
             message.SetActive(true);
         }
     }
@@ -37,12 +60,25 @@ public class openDoor : MonoBehaviour {
     private void OnTriggerStay(Collider other)
     {
        //check for button press
-       if(Input.GetKeyDown(KeyCode.F) && reciever.getLight())
+       if(isInteracting && reciever.getLight())
         {
             
             doorState = !doorState;
-            //play animation
-            door.SetActive(doorState);
+
+            if (timer <= 0)
+            {
+                if (doorState)
+                {
+                    anim.Play("Opening");
+                }
+                else
+                {
+                    anim.Play("Closing");
+                }
+
+                timer = doorDelay;
+            }
+            
             
         }
     }

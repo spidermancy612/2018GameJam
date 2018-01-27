@@ -9,11 +9,17 @@ public class testAnim : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
-        anim.Play("Door Open");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            anim.Play("Opening");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            anim.Play("Closing");
+        }
 	}
 }
