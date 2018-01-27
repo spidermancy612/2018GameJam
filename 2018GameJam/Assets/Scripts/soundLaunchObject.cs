@@ -34,6 +34,7 @@ public class soundLaunchObject : MonoBehaviour {
             rb = GetComponent<Rigidbody>();
             rb.mass = objectMass;
             rb.AddForce(launchAngle*launchSpeed);
+            rb.AddTorque(launchAngle*launchSpeed);
         }
     }
 }
