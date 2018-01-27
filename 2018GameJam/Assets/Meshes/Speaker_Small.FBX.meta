@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: 2148ba975f414a0428be04a23b1e626b
+timeCreated: 1517060223
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Dail001
+    100004: Dail002
+    100006: Dail003
+    100008: Dail004
+    100010: Dail005
+    100012: Speaker001
+    100014: Speaker002
+    100016: Speaker003
+    100018: Speaker004
+    100020: //RootNode
+    100022: Switch001
+    100024: Switch002
+    100026: Switch003
+    400000: Box001
+    400002: Dail001
+    400004: Dail002
+    400006: Dail003
+    400008: Dail004
+    400010: Dail005
+    400012: Speaker001
+    400014: Speaker002
+    400016: Speaker003
+    400018: Speaker004
+    400020: //RootNode
+    400022: Switch001
+    400024: Switch002
+    400026: Switch003
+    2300000: Box001
+    2300002: Dail001
+    2300004: Dail002
+    2300006: Dail003
+    2300008: Dail004
+    2300010: Dail005
+    2300012: Speaker001
+    2300014: Speaker002
+    2300016: Speaker003
+    2300018: Speaker004
+    2300020: Switch001
+    2300022: Switch002
+    2300024: Switch003
+    3300000: Box001
+    3300002: Dail001
+    3300004: Dail002
+    3300006: Dail003
+    3300008: Dail004
+    3300010: Dail005
+    3300012: Speaker001
+    3300014: Speaker002
+    3300016: Speaker003
+    3300018: Speaker004
+    3300020: Switch001
+    3300022: Switch002
+    3300024: Switch003
+    4300000: Speaker001
+    4300002: Box001
+    4300004: Speaker002
+    4300006: Speaker003
+    4300008: Speaker004
+    4300010: Dail001
+    4300012: Switch001
+    4300014: Dail002
+    4300016: Dail003
+    4300018: Switch002
+    4300020: Dail004
+    4300022: Dail005
+    4300024: Switch003
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

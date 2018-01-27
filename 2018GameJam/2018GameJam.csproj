@@ -85,7 +85,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\lightGenericSource.cs" />
+    <Compile Include="Assets\Scripts\lightParticleController.cs" />
     <Compile Include="Assets\Scripts\mainMenuManager.cs" />
+    <Compile Include="Assets\Scripts\openDoor.cs" />
     <Compile Include="Assets\Scripts\playerShoot.cs" />
     <Compile Include="Assets\Scripts\soundLaunchObject.cs" />
     <Compile Include="Assets\Scripts\testMechanic.cs" />
