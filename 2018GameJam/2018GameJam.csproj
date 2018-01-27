@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\playerShoot.cs" />
     <Compile Include="Assets\Scripts\resetAmmoWall.cs" />
     <Compile Include="Assets\Scripts\soundLaunchObject.cs" />
+    <Compile Include="Assets\Scripts\testAnim.cs" />
     <Compile Include="Assets\Scripts\testMechanic.cs" />
     <Compile Include="Assets\Scripts\universalReciever.cs" />
   </ItemGroup>
