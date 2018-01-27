@@ -124,6 +124,10 @@
       <Project>{E8609ACD-E430-B176-F234-46A9AE5360B0}</Project>
       <Name>2018GameJam.Plugins</Name>
     </ProjectReference>
+    <ProjectReference Include="2018GameJam.csproj">
+      <Project>{88FC40BF-89E3-3B53-848B-078613C6E304}</Project>
+      <Name>2018GameJam</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
