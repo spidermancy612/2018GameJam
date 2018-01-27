@@ -9,11 +9,22 @@ public class mainMenuManager : MonoBehaviour {
     [SerializeField]
     private string sceneName = "";
 
+    public GameObject mainMenCanvas;
+    public GameObject optionsMenuCanvas;
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    private void Start()
+    {
+        mainMenCanvas.SetActive(true);
+        optionsMenuCanvas.SetActive(false);
+    }
+
     /////////////////////////////////////////////////////////////////////////////////////////////
     /*
      * Start Game Button code that launches the game scene.
      * */
-    public void StartGame()
+    public void loadScene()
     {
         SceneManager.LoadScene(sceneName);
     }
@@ -28,4 +39,19 @@ public class mainMenuManager : MonoBehaviour {
         Application.Quit();
     }
 
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    public void loadOptionsMenu ()
+    {
+        mainMenCanvas.SetActive(false);
+        optionsMenuCanvas.SetActive(true);
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    public void loadMainMenu ()
+    {
+        mainMenCanvas.SetActive(true);
+        optionsMenuCanvas.SetActive(false);
+    }
 }
