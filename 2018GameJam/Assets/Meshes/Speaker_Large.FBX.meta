@@ -1,122 +1,15 @@
 fileFormatVersion: 2
-guid: 94e885019820d644e871d9e799eae4e4
-timeCreated: 1517060223
+guid: d1962f3246957634695548ede7371182
+timeCreated: 1517065956
 licenseType: Pro
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: Box001
-    100002: Dail001
-    100004: Dail002
-    100006: Dail003
-    100008: Dail004
-    100010: Dail005
-    100012: Dail006
-    100014: Dail007
-    100016: Speaker001
-    100018: Speaker002
-    100020: Speaker003
-    100022: Speaker004
-    100024: Speaker005
-    100026: Speaker006
-    100028: Speaker007
-    100030: //RootNode
-    100032: Switch001
-    100034: Switch002
-    100036: Switch003
-    100038: Switch004
-    100040: Switch005
-    100042: Switch006
-    100044: Switch007
-    400000: Box001
-    400002: Dail001
-    400004: Dail002
-    400006: Dail003
-    400008: Dail004
-    400010: Dail005
-    400012: Dail006
-    400014: Dail007
-    400016: Speaker001
-    400018: Speaker002
-    400020: Speaker003
-    400022: Speaker004
-    400024: Speaker005
-    400026: Speaker006
-    400028: Speaker007
-    400030: //RootNode
-    400032: Switch001
-    400034: Switch002
-    400036: Switch003
-    400038: Switch004
-    400040: Switch005
-    400042: Switch006
-    400044: Switch007
-    2300000: Box001
-    2300002: Dail001
-    2300004: Dail002
-    2300006: Dail003
-    2300008: Dail004
-    2300010: Dail005
-    2300012: Dail006
-    2300014: Dail007
-    2300016: Speaker001
-    2300018: Speaker002
-    2300020: Speaker003
-    2300022: Speaker004
-    2300024: Speaker005
-    2300026: Speaker006
-    2300028: Speaker007
-    2300030: Switch001
-    2300032: Switch002
-    2300034: Switch003
-    2300036: Switch004
-    2300038: Switch005
-    2300040: Switch006
-    2300042: Switch007
-    3300000: Box001
-    3300002: Dail001
-    3300004: Dail002
-    3300006: Dail003
-    3300008: Dail004
-    3300010: Dail005
-    3300012: Dail006
-    3300014: Dail007
-    3300016: Speaker001
-    3300018: Speaker002
-    3300020: Speaker003
-    3300022: Speaker004
-    3300024: Speaker005
-    3300026: Speaker006
-    3300028: Speaker007
-    3300030: Switch001
-    3300032: Switch002
-    3300034: Switch003
-    3300036: Switch004
-    3300038: Switch005
-    3300040: Switch006
-    3300042: Switch007
-    4300000: Speaker001
-    4300002: Box001
-    4300004: Speaker002
-    4300006: Speaker003
-    4300008: Speaker004
-    4300010: Dail001
-    4300012: Switch001
-    4300014: Dail002
-    4300016: Dail003
-    4300018: Switch002
-    4300020: Dail004
-    4300022: Dail005
-    4300024: Switch003
-    4300026: Speaker005
-    4300028: Speaker006
-    4300030: Speaker007
-    4300032: Switch004
-    4300034: Switch005
-    4300036: Switch006
-    4300038: Dail006
-    4300040: Dail007
-    4300042: Switch007
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Speaker_Large
   materials:
     importMaterials: 1
     materialName: 0

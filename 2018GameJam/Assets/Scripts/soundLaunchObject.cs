@@ -29,6 +29,7 @@ public class soundLaunchObject : MonoBehaviour {
         //launches the object in the air if it recieves sound and hasn't been launched before.
         if (runOnce && reciever.getSound())
         {
+            Debug.Log("RAN");
             runOnce = false;
             gameObject.AddComponent(typeof(Rigidbody));
             rb = GetComponent<Rigidbody>();

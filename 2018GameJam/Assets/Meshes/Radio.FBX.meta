@@ -1,57 +1,15 @@
 fileFormatVersion: 2
-guid: 9c204de089b7a594688d979719a8d5ff
-timeCreated: 1517060224
+guid: 828f4fb27e4e2ee4d9834d7866155f3f
+timeCreated: 1517065956
 licenseType: Pro
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: Antenna
-    100002: Dail001
-    100004: Dail002
-    100006: Radio
-    100008: //RootNode
-    100010: Speaker
-    100012: Switch001
-    100014: Switch002
-    100016: Switch003
-    100018: Switch004
-    400000: Antenna
-    400002: Dail001
-    400004: Dail002
-    400006: //RootNode
-    400008: Radio
-    400010: Speaker
-    400012: Switch001
-    400014: Switch002
-    400016: Switch003
-    400018: Switch004
-    2300000: Antenna
-    2300002: Dail001
-    2300004: Dail002
-    2300006: Radio
-    2300008: Speaker
-    2300010: Switch001
-    2300012: Switch002
-    2300014: Switch003
-    2300016: Switch004
-    3300000: Antenna
-    3300002: Dail001
-    3300004: Dail002
-    3300006: Radio
-    3300008: Speaker
-    3300010: Switch001
-    3300012: Switch002
-    3300014: Switch003
-    3300016: Switch004
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Radio
-    4300002: Dail001
-    4300004: Dail002
-    4300006: Switch001
-    4300008: Switch002
-    4300010: Switch003
-    4300012: Switch004
-    4300014: Speaker
-    4300016: Antenna
   materials:
     importMaterials: 1
     materialName: 0

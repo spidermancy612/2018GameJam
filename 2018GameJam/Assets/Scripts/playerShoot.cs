@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class playerShoot : MonoBehaviour {
 
+    public int defaultAmmo;
+    public bool infiniteAmmo;
+
     public int maxSoundAmmo;
     public int maxLightAmmo;
 
@@ -19,6 +22,9 @@ public class playerShoot : MonoBehaviour {
     private void Start()
     {
         ammoText = ammoCounterGUI.GetComponent<Text>();
+
+        lightAmmo = defaultAmmo;
+        soundAmmo = defaultAmmo;
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -26,6 +32,11 @@ public class playerShoot : MonoBehaviour {
     void Update () {
         checkPlayerInput();
         updateAmmoGUI();
+        if (infiniteAmmo)
+        {
+            soundAmmo = 1;
+            lightAmmo = 1;
+        }
 	}
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -48,6 +59,7 @@ public class playerShoot : MonoBehaviour {
             {
                 if (hit.collider.tag == "light")
                 {
+                    Debug.Log("Hit Light");
                     applyLight(hit.collider.gameObject.GetComponent<universalReciever>());
                 }
             }
@@ -61,6 +73,7 @@ public class playerShoot : MonoBehaviour {
             {
                 if (hit.collider.tag == "sound")
                 {
+                    Debug.Log("Hit Sound");
                     applySound(hit.collider.gameObject.GetComponent<universalReciever>());
                 }
             }
@@ -87,15 +100,21 @@ public class playerShoot : MonoBehaviour {
     //Called when the player raycasts to an object tagged as "sound"
     private void applySound (universalReciever reciever)
     {
-        if (reciever.getSound() == true && soundAmmo < maxSoundAmmo)
+        if (reciever.getSound())
         {
-            reciever.updateSound();
-            soundAmmo++;
+            if (soundAmmo < maxSoundAmmo)
+            {
+                reciever.updateSound();
+                soundAmmo++;
+            }
         }
-        else if (reciever == false && soundAmmo > 0)
+        else
         {
-            reciever.updateSound();
-            soundAmmo--;
+            if (soundAmmo > 0)
+            {
+                reciever.updateSound();
+                soundAmmo--;
+            }
         }
     }
 
