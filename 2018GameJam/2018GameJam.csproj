@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\mainMenuManager.cs" />
     <Compile Include="Assets\Scripts\openDoor.cs" />
     <Compile Include="Assets\Scripts\playerShoot.cs" />
+    <Compile Include="Assets\Scripts\resetAmmoWall.cs" />
     <Compile Include="Assets\Scripts\soundLaunchObject.cs" />
     <Compile Include="Assets\Scripts\testMechanic.cs" />
     <Compile Include="Assets\Scripts\universalReciever.cs" />

@@ -8,7 +8,7 @@ public class lightParticleController : MonoBehaviour {
 
     public bool startActive;
     public GameObject activeParticles;
-    public GameObject inActiveParticles;
+    public GameObject inactiveParticles;
     universalReciever reciever;
 
     /////////////////////////////////////////////////////////////////////////////////////////
@@ -19,13 +19,14 @@ public class lightParticleController : MonoBehaviour {
         //is a source at start
         if(startActive)
         {
+            reciever.updateLight();
             activeParticles.SetActive(true);
-            inActiveParticles.SetActive(false);
+            inactiveParticles.SetActive(false);
         }
         else
         {
             activeParticles.SetActive(false);
-            inActiveParticles.SetActive(true);
+            inactiveParticles.SetActive(true);
         }
     }
 
@@ -36,12 +37,12 @@ public class lightParticleController : MonoBehaviour {
         if(reciever.getLight())
         {
             activeParticles.SetActive(true);
-            inActiveParticles.SetActive(false);
+            inactiveParticles.SetActive(false);
         }
         else
         {
             activeParticles.SetActive(false);
-            inActiveParticles.SetActive(true);
+            inactiveParticles.SetActive(true);
         }
 		
 	}
