@@ -30,12 +30,5 @@ public class testMechanic : MonoBehaviour {
         {
             testObject.SetActive(false);
         }
-
-        //Just to show off code
-        if (false)
-        {
-            //This changes the state of the light boolean
-            reciever.updateLight();
-        }
 	}
 }
