@@ -129,9 +129,11 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Scripts\elevatorController.cs" />
     <Compile Include="Assets\Scripts\lightGenericSource.cs" />
     <Compile Include="Assets\Scripts\lightParticleController.cs" />
     <Compile Include="Assets\Scripts\mainMenuManager.cs" />
+    <Compile Include="Assets\Scripts\moveElevator.cs" />
     <Compile Include="Assets\Scripts\openDoor.cs" />
     <Compile Include="Assets\Scripts\playerShoot.cs" />
     <Compile Include="Assets\Scripts\resetAmmoWall.cs" />

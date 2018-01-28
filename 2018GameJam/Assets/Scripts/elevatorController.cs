@@ -4,63 +4,46 @@ using UnityEngine;
 
 [RequireComponent(typeof(universalReciever))]
 
-public class openDoor : MonoBehaviour {
+public class elevatorController : MonoBehaviour
+{
 
-    public GameObject door;
+    public GameObject elevator;
     public GameObject message;
-    public float doorDelay;
 
+    private bool runOnce;
     private universalReciever reciever;
     private bool isInteracting;
 
     private bool isInTrigger;
 
-    private Animator anim;
-
-    private float timer;
-
-    //true = closed door, false = opened door
-    private bool doorState;
-
-	/////////////////////////////////////////////////////////////////////////////////////////
-	void Start ()
+    /////////////////////////////////////////////////////////////////////////////////////////
+    void Start()
     {
-        doorState = true;
         reciever = GetComponent<universalReciever>();
         message.SetActive(false);
-
-        anim = door.GetComponent<Animator>();
-	}
+        runOnce = true;
+    }
 
     /////////////////////////////////////////////////////////////////////////////////////////
     private void Update()
     {
-        if (timer > 0)
+       
+        if (reciever.getLight() && Input.GetKeyDown(KeyCode.F) && isInTrigger)
         {
-            timer -= Time.deltaTime;
-            Debug.Log(timer);
+            elevator.GetComponent<moveElevator>().setIsMoving();
         }
-        if (Input.GetKey(KeyCode.F) && isInTrigger && timer <= 0)
+
+        if(runOnce && reciever.getSound())
         {
-            doorState = !doorState;
-
-            if (!doorState)
-            {
-                anim.Play("Opening");
-            }
-            else
-            {
-                anim.Play("Closing");
-            }
-
-            timer = doorDelay;
+            runOnce = false;
+            elevator.GetComponent<moveElevator>().setIsMoving();
         }
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////
     private void OnTriggerEnter(Collider other)
     {
-        if(reciever.getLight())
+        if (reciever.getLight())
         {
             message.SetActive(true);
         }
