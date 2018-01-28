@@ -101,7 +101,7 @@ public class playerShoot : MonoBehaviour {
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
-    //
+    //Shoot the player gun
     private void fireAnimation ()
     {
         anim.Play("Shoot");
