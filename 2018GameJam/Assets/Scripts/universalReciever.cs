@@ -26,7 +26,7 @@ public class universalReciever : MonoBehaviour {
     {
         soundActive = !soundActive;
         soundTimer = 2;
-        soundChanged = true;
+        soundChanged = false;
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
