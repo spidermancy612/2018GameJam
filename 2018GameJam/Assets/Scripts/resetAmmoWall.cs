@@ -25,6 +25,7 @@ public class resetAmmoWall : MonoBehaviour {
             }
             playerCamera.GetComponent<playerShoot>().setLightAmmo(newLightAmmo);
             playerCamera.GetComponent<playerShoot>().setSoundAmmo(newSoundAmmo);
+            playerCamera.GetComponent<playerShoot>().updateAnimations();
             door.GetComponent<Animator>().Play("Closing");
 
             this.enabled = false;

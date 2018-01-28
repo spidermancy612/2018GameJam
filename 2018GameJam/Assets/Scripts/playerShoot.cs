@@ -62,7 +62,7 @@ public class playerShoot : MonoBehaviour {
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     //
-    private void updateAnimations ()
+    public void updateAnimations ()
     {
         anim.SetInteger("soundCount", soundAmmo);
 
