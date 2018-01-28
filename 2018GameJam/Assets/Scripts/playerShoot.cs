@@ -73,6 +73,7 @@ public class playerShoot : MonoBehaviour {
         //left click - for lights
         if (Input.GetMouseButtonDown(0))
         {
+            fireTrumpet();
             RaycastHit hit;
 
             Debug.Log("left click");
@@ -91,6 +92,7 @@ public class playerShoot : MonoBehaviour {
         //right click - for sounds
         if (Input.GetMouseButtonDown(1))
         {
+            fireTrumpet();
             RaycastHit hit;
             Debug.Log("right click");
             if (Physics.Raycast(transform.position, transform.forward, out hit))
@@ -107,6 +109,16 @@ public class playerShoot : MonoBehaviour {
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    private void fireTrumpet ()
+    {
+        for (int i = 0; i < trumpetAnimatorArray.Length; i++)
+        {
+            trumpetAnimatorArray[i].Play("Shoot");
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     //Called when the player raycasts to an object tagged as "light"
     private void applyLight(universalReciever reciever)
     {
@@ -114,11 +126,13 @@ public class playerShoot : MonoBehaviour {
         {
             reciever.updateLight();
             lightAmmo++;
+            fireTrumpet();
         }
         else if (reciever.getLight() == false && lightAmmo > 0)
         {
             reciever.updateLight();
             lightAmmo--;
+            fireTrumpet();
         }
     }
 
@@ -134,6 +148,7 @@ public class playerShoot : MonoBehaviour {
             {
                 reciever.updateSound();
                 soundAmmo++;
+                fireTrumpet();
             }
         }
         else
@@ -142,6 +157,7 @@ public class playerShoot : MonoBehaviour {
             {
                 reciever.updateSound();
                 soundAmmo--;
+                fireTrumpet();
             }
         }
     }
