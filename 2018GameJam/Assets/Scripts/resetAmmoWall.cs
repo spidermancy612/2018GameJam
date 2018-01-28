@@ -8,16 +8,9 @@ public class resetAmmoWall : MonoBehaviour {
     public bool isNewScene;
     public string sceneName;
     public GameObject playerCamera;
-    public GameObject wall;
+    public GameObject door;
     public int newLightAmmo;
     public int newSoundAmmo;
-
-    //////////////////////////////////////////////////////////////////////////////////////////////
-    private void Start()
-    {
-        if(wall != null)
-        wall.SetActive(false);
-    }
 
     //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -31,8 +24,11 @@ public class resetAmmoWall : MonoBehaviour {
                 return;
             }
             playerCamera.GetComponent<playerShoot>().setLightAmmo(newLightAmmo);
-            playerCamera.GetComponent<playerShoot>().setLightAmmo(newLightAmmo);
-            wall.SetActive(true);
+            playerCamera.GetComponent<playerShoot>().setSoundAmmo(newSoundAmmo);
+            door.GetComponent<Animator>().Play("Closing");
+
+            this.enabled = false;
+            
         }
     }
 }

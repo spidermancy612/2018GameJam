@@ -44,7 +44,7 @@ public class openDoor : MonoBehaviour {
         {
             doorState = !doorState;
 
-            if (doorState)
+            if (!doorState)
             {
                 anim.Play("Opening");
             }
