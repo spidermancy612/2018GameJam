@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 81574825868113522}
   - component: {fileID: 124413859885853438}
   - component: {fileID: 114249683334416330}
+  - component: {fileID: 114504873620014136}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -413,6 +414,23 @@ MonoBehaviour:
   maxSoundAmmo: 3
   maxLightAmmo: 3
   ammoCounterGUI: {fileID: 0}
+  lightOne: {fileID: 0}
+  lightTwo: {fileID: 0}
+  lightThree: {fileID: 0}
+  trumpetFork: {fileID: 0}
+  trumpetPartsArray: []
+--- !u!114 &114504873620014136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608189846922838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: d9c460a8aeac1d6408a47efcfa888ef8, type: 2}
 --- !u!114 &114549478646356146
 MonoBehaviour:
   m_ObjectHideFlags: 1

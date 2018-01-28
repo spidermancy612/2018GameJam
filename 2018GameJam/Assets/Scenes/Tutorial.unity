@@ -287,11 +287,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: bedc295726d94d142a393483ce6558a9, type: 3}
---- !u!1 &84577075 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1754764995869880, guid: 8c5a0db35c8a9e74eab357819a81273d,
-    type: 2}
-  m_PrefabInternal: {fileID: 669445211}
 --- !u!1 &87209522 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100006, guid: 1814849a00034ab40b68ea03d63b361c, type: 3}
@@ -446,7 +441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &182850620
 Transform:
   m_ObjectHideFlags: 0
@@ -685,24 +680,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4178239528674584, guid: 2ba3c8abdc224a441b38e38fe8bf8438, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114249683334416330, guid: 2ba3c8abdc224a441b38e38fe8bf8438,
-        type: 2}
-      propertyPath: ammoCounterGUI
-      value: 
-      objectReference: {fileID: 84577075}
-    - target: {fileID: 1160046033322056, guid: 2ba3c8abdc224a441b38e38fe8bf8438, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1281435631991988, guid: 2ba3c8abdc224a441b38e38fe8bf8438, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 20803386343252828, guid: 2ba3c8abdc224a441b38e38fe8bf8438,
-        type: 2}
-      propertyPath: m_HDR
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1703,18 +1680,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1608189846922838, guid: 2ba3c8abdc224a441b38e38fe8bf8438,
     type: 2}
   m_PrefabInternal: {fileID: 426576926}
---- !u!114 &766150325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 766150319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: d9c460a8aeac1d6408a47efcfa888ef8, type: 2}
 --- !u!1 &825388659 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 474ee2e12191e7f4984f28be31456599, type: 3}
