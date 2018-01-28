@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class playerShoot : MonoBehaviour {
 
-    public int defaultAmmo;
+    public int defaultAmmo;             
     public bool infiniteAmmo;
 
     public int maxSoundAmmo;
@@ -17,6 +17,16 @@ public class playerShoot : MonoBehaviour {
     private int lightAmmo;
     private int soundAmmo;
 
+    public GameObject lightOne;
+    public GameObject lightTwo;
+    public GameObject lightThree;
+
+    public GameObject trumpetFork;
+    public GameObject[] trumpetPartsArray;
+
+    private Animator forkAnimator;
+    private Animator[] trumpetAnimatorArray;
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     //Method called once at start of scene
     private void Start()
@@ -25,6 +35,16 @@ public class playerShoot : MonoBehaviour {
 
         lightAmmo = defaultAmmo;
         soundAmmo = defaultAmmo;
+
+        forkAnimator = trumpetFork.GetComponent<Animator>();
+
+        trumpetPartsArray = new GameObject[5];
+        trumpetAnimatorArray = new Animator[5];
+
+        for (int i = 0; i < trumpetPartsArray.Length; i++)
+        {
+            trumpetAnimatorArray[i] = trumpetPartsArray[i].GetComponent<Animator>();
+        }
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
