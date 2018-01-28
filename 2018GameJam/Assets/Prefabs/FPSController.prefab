@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 114549478646356146}
   - component: {fileID: 54996445145998568}
   - component: {fileID: 82007888350044596}
+  - component: {fileID: 114106201239401374}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Player
@@ -323,7 +324,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1375321142717126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -119.86, y: 1.43, z: -17.9}
+  m_LocalPosition: {x: -33.82, y: 1.58, z: -11.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4726901162750386}
@@ -1116,7 +1117,7 @@ Animator:
   m_GameObject: {fileID: 1073134502203206}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: d3d1745c9ef2eb94585879a1a25f1493, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61d10a427abe76a46ac2a8be6fb4fa82, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1133,7 +1134,7 @@ Animator:
   m_GameObject: {fileID: 1405859418842358}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: d3d1745c9ef2eb94585879a1a25f1493, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f8ff294656ebed409f18ab2bab7b964, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1291,6 +1292,22 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114106201239401374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1375321142717126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8634e062924929664361c08745211fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: 2
+  target: {fileID: 0}
+  source: {fileID: 0}
+  triggerCount: 1
+  repeatTrigger: 0
 --- !u!114 &114249683334416330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1303,14 +1320,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultAmmo: 0
-  infiniteAmmo: 1
+  infiniteAmmo: 0
   maxSoundAmmo: 3
   maxLightAmmo: 3
   ammoCounterGUI: {fileID: 0}
-  lightOne: {fileID: 0}
-  lightTwo: {fileID: 0}
-  lightThree: {fileID: 0}
-  trumpetFork: {fileID: 0}
+  lightOne: {fileID: 1413506943545182}
+  lightTwo: {fileID: 1571946719820456}
+  lightThree: {fileID: 1140113995159088}
+  trumpet: {fileID: 1405859418842358}
   trumpetPartsArray:
   - {fileID: 1696890876166208}
   - {fileID: 1682095990637632}

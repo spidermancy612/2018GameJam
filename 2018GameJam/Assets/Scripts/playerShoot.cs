@@ -21,10 +21,10 @@ public class playerShoot : MonoBehaviour {
     public GameObject lightTwo;
     public GameObject lightThree;
 
-    public GameObject trumpetFork;
+    public GameObject trumpet;
     public GameObject[] trumpetPartsArray;
 
-    private Animator forkAnimator;
+    private Animator anim;
     private Animator[] trumpetAnimatorArray;
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36,15 +36,9 @@ public class playerShoot : MonoBehaviour {
         lightAmmo = defaultAmmo;
         soundAmmo = defaultAmmo;
 
-        forkAnimator = trumpetFork.GetComponent<Animator>();
+        anim = trumpet.GetComponent<Animator>();
 
-        trumpetPartsArray = new GameObject[5];
-        trumpetAnimatorArray = new Animator[5];
-
-        for (int i = 0; i < trumpetPartsArray.Length; i++)
-        {
-            trumpetAnimatorArray[i] = trumpetPartsArray[i].GetComponent<Animator>();
-        }
+        updateAnimations();
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -67,6 +61,53 @@ public class playerShoot : MonoBehaviour {
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    private void updateAnimations ()
+    {
+        anim.SetInteger("soundCount", soundAmmo);
+
+        //Choose how many lights are on
+        switch (lightAmmo)
+        {
+            case 1:
+                {
+                    lightOne.SetActive(true);
+                    lightTwo.SetActive(false);
+                    lightThree.SetActive(false);
+                    break;
+                }
+            case 2:
+                {
+                    lightOne.SetActive(true);
+                    lightTwo.SetActive(true);
+                    lightThree.SetActive(false);
+                    break;
+                }
+            case 3:
+                {
+                    lightOne.SetActive(true);
+                    lightTwo.SetActive(true);
+                    lightThree.SetActive(true);
+                    break;
+                }
+            default:
+                {
+                    lightOne.SetActive(false);
+                    lightTwo.SetActive(false);
+                    lightThree.SetActive(false);
+                    break;
+                }
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    private void fireAnimation ()
+    {
+        anim.Play("Shoot");
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     //Method checks for user input when pressing the mouse keys
     private void checkPlayerInput ()
     {
@@ -75,15 +116,14 @@ public class playerShoot : MonoBehaviour {
         {
             RaycastHit hit;
 
-            Debug.Log("left click");
             if (Physics.Raycast(transform.position, transform.forward, out hit))
             {
-                Debug.Log("hit something");
                 Debug.Log(hit.collider.tag);
                 if (hit.collider.tag == "light")
                 {
-                    Debug.Log("Hit Light");
                     applyLight(hit.collider.gameObject.GetComponent<universalReciever>());
+                    updateAnimations();
+                    fireAnimation();
                 }
             }
         }
@@ -92,15 +132,14 @@ public class playerShoot : MonoBehaviour {
         if (Input.GetMouseButtonDown(1))
         {
             RaycastHit hit;
-            Debug.Log("right click");
             if (Physics.Raycast(transform.position, transform.forward, out hit))
             {
-                Debug.Log("hit something");
                 Debug.Log(hit.collider.tag);
                 if (hit.collider.tag == "sound")
                 {
-                    Debug.Log("Hit Sound");
                     applySound(hit.collider.gameObject.GetComponent<universalReciever>());
+                    updateAnimations();
+                    fireAnimation();
                 }
             }
         }
