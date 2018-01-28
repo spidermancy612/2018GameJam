@@ -15,26 +15,23 @@ public class pauseMenuManager : MonoBehaviour {
 
     /////////////////////////////////////////////////////////////////////////////////////////
     void Update () {
-		if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.P))
         {
-            isPaused = !isPaused;
-        }
+            Time.timeScale = 0f;
+            pauseCanvas.SetActive(true);
 
-        if (isPaused)
-        {
-            Time.timeScale = 0;
-            pauseCanvas.SetActive(false);
-        }
-        else
-        {
-            Time.timeScale = 1f;
-            pauseCanvas.SetActive(false);
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////
-    public void pauseGame()
+    public void resumeGame()
     {
-        isPaused = !isPaused;
+        Time.timeScale = 1f;
+        pauseCanvas.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
